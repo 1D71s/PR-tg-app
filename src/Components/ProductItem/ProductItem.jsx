@@ -2,11 +2,8 @@ import React from 'react';
 import Button from "../Button/Button";
 import './ProductItem.css';
 
-const ProductItem = ({product, className}) => {
-
-    const onAddHandler = () => {
-    }
-
+const ProductItem = ({ product, className }) => {
+    
     return (
         <div className={'product ' + className}>
             <div className={'img'}/>

@@ -2,66 +2,21 @@ import React, {useState} from 'react';
 import './ProductList.css';
 import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
-import {useCallback, useEffect} from "react";
+import {useEffect} from "react";
 
-const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
-]
-
-const getTotalPrice = (items = []) => {
-    return items.reduce((acc, item) => {
-        return acc += item.price
-    }, 0)
-}
+const test = [{"id":51,"name":"dgbdfgb","image":"https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990678336.jpg","description":"dfgbdfgb","price":"4.00","createdAt":"2024-01-11T16:31:20.364Z","updatedAt":"2024-01-11T17:54:12.662Z"},{"id":53,"name":"trh","image":"https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990732313.jpg","description":"rth","price":"444.00","createdAt":"2024-01-11T16:32:13.994Z","updatedAt":"2024-01-11T18:06:23.282Z"},{"id":48,"name":"fhnfghn","image":"https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704911728878.jpg","description":"fhn","price":"66666.00","createdAt":"2024-01-10T18:35:32.774Z","updatedAt":"2024-01-11T18:06:36.707Z"},{"id":52,"name":"fgb","image":"https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990698910.jpg","description":"fgb","price":"77.00","createdAt":"2024-01-11T16:31:40.554Z","updatedAt":"2024-01-11T18:33:47.604Z"},{"id":55,"name":"yyy","image":"https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704998464291.jpg","description":"ttt","price":"66.00","createdAt":"2024-01-11T18:41:05.786Z","updatedAt":"2024-01-11T18:41:05.786Z"}]
 
 const ProductList = () => {
-    const [products, setProducts] = useState([]);
-
-    const [addedItems, setAddedItems] = useState([]);
+    const [products, setProducts] = useState(test);
     const {tg, queryId} = useTelegram();
 
-    const onSendData = useCallback(() => {
-        const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
-            queryId,
-        }
-        fetch('http://localhost:8000/web-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-    }, [addedItems])
-
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
-        return () => {
-            tg.offEvent('mainButtonClicked', onSendData)
-        }
-    }, [onSendData])
-
-    useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData);
-
-        // Здесь вы можете сделать запрос к серверу для получения списка продуктов
         fetch('http://localhost:8000/products')
             .then(response => response.json())
             .then(data => setProducts(data))
             .catch(error => console.error('Error fetching products:', error));
 
-        return () => {
-            tg.offEvent('mainButtonClicked', onSendData);
-        };
-    }, [onSendData, tg]);
+    }, [tg]);
 
     return (
         <div className={'list'}>
