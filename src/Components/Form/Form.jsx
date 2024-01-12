@@ -22,7 +22,7 @@ const Form = () => {
 
     return (
         <div className={"form"}>
-            <h3>Введите ваши данные</h3>
+            <h4>Данні для доставки:</h4>
             <input
                 className={'input'}
                 type="text"
@@ -42,7 +42,7 @@ const Form = () => {
                 <option value={'legal'}>Юр. лицо</option>
             </select>
         </div>
-    );
-};
+    )
+}
 
 export default Form;

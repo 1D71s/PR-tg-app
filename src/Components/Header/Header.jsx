@@ -9,9 +9,8 @@ const Header = () => {
     return (
         <div className={'header'}>
             <Button onClick={onClose}>Создать пиццу</Button>
-            
         </div>
-    );
-};
+    )
+}
 
 export default Header;

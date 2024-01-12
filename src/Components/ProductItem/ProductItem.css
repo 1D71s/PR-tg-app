@@ -1,24 +1,56 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--tg-theme-button-color);
-    border: 1px solid rgb(80, 80, 255);
-    padding: 15px;
+    padding: 5px;
     width: 170px;
 }
 
 
 .img {
     width: 100%;
-    background: lightgray;
-    height: 100px;
+    height: 150px;
     margin: 0 auto;
+    object-fit: cover;
+    background: lightgray;
+    border-radius: 10px;
 }
 
 .description {
+    margin: 5px;
     font-size: 0.8em;
 }
 
-.add-btn {
+.price {
+    margin: 5px;
+}
+
+.btns-cont {
+    display: flex;
+}
+
+.btn-item {
     width: 100%;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.btn-minus {
+    color: rgb(80, 80, 255);
+    background: none;
+    border: 1px solid rgb(80, 80, 255) 
+}
+
+.counter {
+    background: rgb(80, 80, 255);
+    color: white;
+    width: 24px; /* Выберите подходящую ширину */
+    height: 24px; /* Выберите подходящую высоту */
+    padding: 5px;
+    border-radius: 50%; /* Сделать круглым */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 3%;
+    left: 95%;
 }
