@@ -41,16 +41,7 @@ const ProductList = () => {
     }, [backet, tg]);
   
     const onAdd = (product) => {
-        dispatch(addToBasket(product));
-
-        if (backet.length === 0) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-            tg.MainButton.setParams({
-                text: `Замовити: ${getTotalPrice(backet)} ГРН`
-            });
-        }    
+        dispatch(addToBasket(product));  
     }
 
     const onDelete = (product) => {
@@ -60,6 +51,15 @@ const ProductList = () => {
 
     useEffect(() => {
         setTotalPriceBacket(getTotalPrice(backet))
+
+        if (backet.length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+            tg.MainButton.setParams({
+                text: `Замовити: ${getTotalPrice(backet)} ГРН`
+            });
+        }  
     }, [backet])
   
     return (
