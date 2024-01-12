@@ -19,7 +19,7 @@ const ProductItem = ({ product, className, onAdd, onDelete, backet }) => {
 
     return (
         <div className={'product ' + className}>
-            <div className={'counter'}>{getCount()}</div>
+            {getCount() < 1 && <div className={'counter'}>{getCount()}</div>}
             <img src={product.image} className={'img'}/>
             <div className={'title'}>{product.name}</div>
             <div className={'description'}>{product.description}</div>
