@@ -2,8 +2,8 @@
     padding: 10px 15px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
-    /* background: rgb(80, 80, 255); */
-    /* color: white; */
+    /* background: rgb(80, 80, 255);
+    color: white; */
     border: none;
     outline: none;
     cursor: pointer;
