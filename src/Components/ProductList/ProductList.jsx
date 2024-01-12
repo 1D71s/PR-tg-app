@@ -29,11 +29,12 @@ const ProductList = () => {
     }, [tg]);
 
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', navigate('/form'))
+        tg.onEvent('mainButtonClicked', () => navigate('/form'));
         return () => {
-            tg.offEvent('mainButtonClicked', navigate('/form'))
-        }
-    }, [navigate])
+            tg.offEvent('mainButtonClicked', () => navigate('/form'));
+        };
+    }, [navigate, tg]);
+    
 
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
