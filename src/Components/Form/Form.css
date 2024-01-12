@@ -9,9 +9,55 @@
     width: 100%;
     padding: 10px;
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 .select {
     padding: 10px;
     margin-top: 15px;
+}
+
+.btn-order {
+    margin-top: 20px;
+}
+
+.price-order {
+    margin-top: 20px;
+}
+
+.cont-product-backet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cont-img-name-b {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.img-product-backet {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    object-fit: cover;
+    background: lightgray;
+    border-radius: 10px;
+}
+
+.name-product-backet {
+    margin: 20px;
+    margin-top: 20%;
+}
+
+.cont-price-count-b {
+    margin-top: 20px;
+}
+
+.price-product-backet {
+
+}
+
+.count-product-backet {
+
 }
