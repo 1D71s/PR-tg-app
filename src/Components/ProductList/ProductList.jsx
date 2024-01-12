@@ -14,8 +14,91 @@ export const getTotalPrice = (items = []) => {
     }, 0)
 }
 
-const test = [{ "id": 51, "name": "dgbdfgb", "image": "https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990678336.jpg", "description": "dfgbdfgb", "price": "4.00", "createdAt": "2024-01-11T16:31:20.364Z", "updatedAt": "2024-01-11T17:54:12.662Z" }, { "id": 53, "name": "trh", "image": "https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990732313.jpg", "description": "rth", "price": "444.00", "createdAt": "2024-01-11T16:32:13.994Z", "updatedAt": "2024-01-11T18:06:23.282Z" }, { "id": 48, "name": "fhnfghn", "image": "https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704911728878.jpg", "description": "fhn", "price": "66666.00", "createdAt": "2024-01-10T18:35:32.774Z", "updatedAt": "2024-01-11T18:06:36.707Z" }, { "id": 52, "name": "fgb", "image": "https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704990698910.jpg", "description": "fgb", "price": "77.00", "createdAt": "2024-01-11T16:31:40.554Z", "updatedAt": "2024-01-11T18:33:47.604Z" }, { "id": 55, "name": "yyy", "image": "https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1704998464291.jpg", "description": "ttt", "price": "66.00", "createdAt": "2024-01-11T18:41:05.786Z", "updatedAt": "2024-01-11T18:41:05.786Z" }]
-
+const test = [
+    {
+        id: 56,
+        name: '4 сири',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705084045049.jpg',
+        description: 'вершкова основа, моцарела, дор блю, вершковий сир, пармезан',
+        price: '165.00',
+        createdAt: '2024-01-12T18:27:35.497Z',
+        updatedAt: '2024-01-12T18:27:35.497Z'
+    },
+    {
+        id: 57,
+        name: 'Мʼясна',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705084713163.jpg',
+        description: 'томатна основа, сир моцарела, куряче філе, шинка і бекон',
+        price: '155.00',
+        createdAt: '2024-01-12T18:38:41.841Z',
+        updatedAt: '2024-01-12T18:38:41.841Z'
+    },
+    {
+        id: 58,
+        name: 'Техас',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705085988215.jpg',
+        description: 'вершкова основа, сир моцарела, мисливські ковбаски, помідор, гриби, кукурудза.',
+        price: '160.00',
+        createdAt: '2024-01-12T18:59:52.935Z',
+        updatedAt: '2024-01-12T18:59:52.935Z'
+    },
+    {
+        id: 60,
+        name: 'Груша дор блю',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086305627.jpg',
+        description: 'вершкова основа, сир моцарела, груша, дор блю, горішки.',
+        price: '165.00',
+        createdAt: '2024-01-12T19:05:08.887Z',
+        updatedAt: '2024-01-12T19:05:08.887Z'
+    },
+    {
+        id: 61,
+        name: 'Піца Папероні',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086379388.jpg',
+        description: 'червона основа із томатів пелаті, сир моцарела, ковбаса папероні і болгарський перець.',
+        price: '150.00',
+        createdAt: '2024-01-12T19:06:22.233Z',
+        updatedAt: '2024-01-12T19:06:22.233Z'
+    },
+    {
+        id: 62,
+        name: 'Тальянська піца',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086426127.jpg',
+        description: 'Вершки, сир моцарела, куряче філе, шинка, шампіньйони і корнішони.',
+        price: '160.00',
+        createdAt: '2024-01-12T19:07:10.030Z',
+        updatedAt: '2024-01-12T19:07:10.030Z'
+    },
+    {
+        id: 63,
+        name: 'Карбонара',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086463080.jpg',
+        description: 'Вершки, сир моцарела, бекон, пармезан і рукола.',
+        price: '150.00',
+        createdAt: '2024-01-12T19:07:47.990Z',
+        updatedAt: '2024-01-12T19:07:47.990Z'
+    },
+    {
+        id: 64,
+        name: 'Баварська',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086541481.jpg',
+        description: 'соус із томатів пелаті, сир моцарела, ковбаса папероні, мисливські ковбаски, помідор, цибуля.',
+        price: '160.00',
+        createdAt: '2024-01-12T19:09:05.348Z',
+        updatedAt: '2024-01-12T19:09:05.348Z'
+    },
+    {
+        id: 65,
+        name: 'Гавайська піца',
+        image: 'https://pr-tg-bot.s3.eu-north-1.amazonaws.com/image_1705086578652.jpg',
+        description: 'соус із томатів пелаті, сир моцарела, куряче філе, шинка, кукурудза та ананаси.',
+        price: '155.00',
+        createdAt: '2024-01-12T19:09:39.890Z',
+        updatedAt: '2024-01-12T19:09:39.890Z'
+    }
+]
+  
+  
 const ProductList = () => {
     const [products, setProducts] = useState(test);
     const { tg, queryId } = useTelegram();

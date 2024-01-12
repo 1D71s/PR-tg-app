@@ -17,15 +17,19 @@
 
 .title {
     margin: 0 auto;
+    color: var(--tg-theme-button-text-color);
 }
 
 .description {
     margin: 5px;
+    color: var(--tg-theme-button-text-color);
     font-size: 0.6em;
+    height: 50px;
 }
 
 .price {
     margin: 5px;
+    color: var(--tg-theme-button-text-color);
 }
 
 .btns-cont {
