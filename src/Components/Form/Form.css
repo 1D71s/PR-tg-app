@@ -5,6 +5,10 @@
     padding: 20px;
 }
 
+.hd {
+    color: var(--tg-theme-button-color);
+}
+
 .input {
     width: 100%;
     padding: 10px;
@@ -22,6 +26,7 @@
 }
 
 .price-order {
+    color: var(--tg-theme-button-color);
     margin-top: 20px;
 }
 
@@ -29,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    color: var(--tg-theme-button-color);
 }
 
 .cont-img-name-b {

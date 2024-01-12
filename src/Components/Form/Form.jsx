@@ -43,7 +43,7 @@ const Form = () => {
 
     return (
         <div className={"form"}>
-            <h4>Данні для доставки:</h4>
+            <h4 className='hd'>Данні для доставки:</h4>
             {
                 backet.map((item) =>
                     <div className='cont-product-backet'>
