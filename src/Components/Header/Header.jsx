@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <div className={'header'}>
             <Button className='btn-minus' onClick={() => navigate('/')}>Меню</Button>
-            <Button onClick={onClose}>Создать пиццу</Button>
+            <Button onClick={onClose}>Створити піцу</Button>
         </div>
     )
 }

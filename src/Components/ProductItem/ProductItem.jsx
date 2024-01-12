@@ -21,7 +21,7 @@ const ProductItem = ({ product, className, onAdd, onDelete, backet }) => {
         <div className={'product ' + className}>
             <div className={'counter'}>{getCount()}</div>
             <img src={product.image} className={'img'}/>
-            <div className={'title'}>{product.title}</div>
+            <div className={'title'}>{product.name}</div>
             <div className={'description'}>{product.description}</div>
             <div className={'price'}>
                 <span><b>{product.price}</b> грн</span>
