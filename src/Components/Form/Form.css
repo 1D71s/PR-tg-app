@@ -12,8 +12,8 @@
 .input {
     width: 100%;
     padding: 10px;
-    margin-top: 15px;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 .select {
@@ -61,10 +61,33 @@
 }
 
 .price-product-backet {
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 .count-product-backet {
     display: flex;
     justify-content: flex-end;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.checkbox-label {
+    margin-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-container input:checked + .checkbox-label {
+    color: var(--tg-theme-button-color);
+}
+
+.label {
+    font-size: 12px;
+    margin-top: 15px;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Button from "../Button/Button";
 import './ProductItem.css';
 
-const ProductItem = ({ product, className, onAdd, onDelete, backet }) => {
+const ProductItem = ({ product, className, onAdd, onDelete, basket }) => {
 
     const onAddHandler = () => {
         onAdd(product);
@@ -13,13 +13,13 @@ const ProductItem = ({ product, className, onAdd, onDelete, backet }) => {
     }
 
     const getCount = () => {
-        const itemInBasket = backet.find(item => item.id === product.id);
+        const itemInBasket = basket.find(item => item.id === product.id);
         return itemInBasket ? itemInBasket.quantity : 0;
     }
 
     return (
         <div className={'product ' + className}>
-            <div className={'counter'}>{getCount()}</div>
+            {getCount() > 0 ? <div className={'counter'}>{getCount()}</div> : <div className='count-empt'></div>}
             <img src={product.image} className={'img'}/>
             <div className={'title'}>{product.name}</div>
             <div className={'description'}>{product.description}</div>

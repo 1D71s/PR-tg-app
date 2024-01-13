@@ -103,8 +103,8 @@ const ProductList = () => {
     const [products, setProducts] = useState(test);
     const { tg, queryId } = useTelegram();
     const dispatch = useDispatch();
-    const backet = useSelector(state => state.basket); 
-    const [totalPriceBacket, setTotalPriceBacket] = useState() 
+    const basket = useSelector(state => state.basket); 
+    const [totalPriceBasket, setTotalPriceBasket] = useState() 
 
     const navigate = useNavigate();
   
@@ -120,7 +120,7 @@ const ProductList = () => {
         return () => {
             tg.offEvent('mainButtonClicked', () => navigate('/form'));
         };
-    }, [backet, tg]);
+    }, [basket, tg]);
   
     const onAdd = (product) => {
         dispatch(addToBasket(product));  
@@ -128,32 +128,32 @@ const ProductList = () => {
 
     const onDelete = (product) => {
         dispatch(deleteFromBasket(product));
-        setTotalPriceBacket(getTotalPrice(backet))
+        setTotalPriceBasket(getTotalPrice(basket))
     }
 
     useEffect(() => {
-        setTotalPriceBacket(getTotalPrice(backet))
+        setTotalPriceBasket(getTotalPrice(basket))
 
-        if (backet.length === 0) {
+        if (basket.length === 0) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Замовити: ${getTotalPrice(backet)} ГРН`
+                text: `Замовити: ${getTotalPrice(basket)} ГРН`
             });
         }  
-    }, [backet])
+    }, [basket])
   
     return (
         <>
-            {!queryId && <Button onClick={() => navigate('/form')}>{totalPriceBacket} ГРН</Button>}
+            {!queryId && <Button onClick={() => navigate('/form')}>{totalPriceBasket} ГРН</Button>}
             <div className={'list'}>
                 {products.map(item => (
                     <ProductItem
                         key={item.id}
                         product={item}
                         onAdd={onAdd}
-                        backet={backet}
+                        basket={basket}
                         onDelete={onDelete}
                         className={'item'}
                     />
